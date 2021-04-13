@@ -12,9 +12,5 @@ class dlyaFramentov : AppCompatActivity() {
         val navController = Navigation.findNavController(this@dlyaFramentov, R.id.fragment123)
 
         navController?.navigate(R.id.wanted)
-
-
-
-
     }
 }

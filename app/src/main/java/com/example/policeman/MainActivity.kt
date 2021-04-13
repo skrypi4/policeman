@@ -35,18 +35,12 @@ class MainActivity : AppCompatActivity() {
         fun plavno(a:ImageView){//доделать!!!!!!!!!!!!!!
             var b = 1f
             for (i in 1..20) {
-
-
                 a.alpha = b
                 b -= 0.10f
                 Handler().postDelayed(Runnable {
                 }, 2000)
             }
-
         }
-
-
-
         fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
         fun random(n1: Int, n2: Int) = Random.nextInt(n1, n2 + 1)
         fun loadScreen(){
@@ -64,15 +58,9 @@ class MainActivity : AppCompatActivity() {
                 progressBar.visibility = View.INVISIBLE
                 plavno(imageLoad)
 
-
-
             }, 2000)
-
-
         }
-
         loadScreen()
-
         if (settings.contains(myLogin)) {
             login.text = settings.getString(myLogin, "")?.toEditable()
             password.text = settings.getString(myPassword, "")?.toEditable()
@@ -102,9 +90,6 @@ class MainActivity : AppCompatActivity() {
                             if(p1?.code()!=200){
                                 Toast.makeText(this@MainActivity, "Логин или пароль неверный", Toast.LENGTH_LONG).show()
                             }
-
-
-
                     }
 
                     override fun onFailure(p0: Call<Response.response>?, p1: Throwable?) {
@@ -120,10 +105,6 @@ class MainActivity : AppCompatActivity() {
             editor.putString(myLogin, strName)
             editor.putString(myPassword, strPassword)
             editor.apply()
-
-
-
-
         }
     }
 }

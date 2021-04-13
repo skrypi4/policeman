@@ -51,9 +51,6 @@ class photoRobot : AppCompatActivity() {
         }
         catch (E: Exception){
             Toast.makeText(this, "Ошибка", Toast.LENGTH_SHORT).show()
-
-
-
         }
     }
 
@@ -71,7 +68,6 @@ class photoRobot : AppCompatActivity() {
                 imageView3.visibility = View.INVISIBLE
                 Toast.makeText(this, "Вы разблокировали шрека", Toast.LENGTH_LONG).show()
             }
-
         }, 3000)
     }
 
@@ -101,8 +97,6 @@ class photoRobot : AppCompatActivity() {
         }, 1500)
     }
 
-
-    //@SuppressLint("ClickableViewAccessibility")
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
