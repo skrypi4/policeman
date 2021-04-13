@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="182dp"
+        android:layout_height="86dp"
+        android:drawableLeft="@drawable/paint"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="Paint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="182dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="232dp"
+        android:drawableLeft="@drawable/departments"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="Departments"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="220dp"
+        android:drawableLeft="@drawable/about"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="About Us"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="182dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="232dp"
+        android:drawableLeft="@drawable/wanted"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="Wanted"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="182dp"
+        android:layout_height="86dp"
+        android:drawableLeft="@drawable/photorobot"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="4"
+        android:shadowRadius="2"
+        android:text="PhotoRobot"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

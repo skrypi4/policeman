@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentnavigation"
+    app:startDestination="@id/wanted">
+
+    <fragment
+        android:id="@+id/wanted"
+        android:name="com.example.policeman.Wanted"
+        android:label="fragment_wanted"
+        tools:layout="@layout/fragment_wanted" />
+</navigation>
