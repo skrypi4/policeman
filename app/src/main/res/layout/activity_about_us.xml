@@ -73,7 +73,7 @@
     <TextView
         android:id="@+id/textView5"
         android:layout_width="396dp"
-        android:layout_height="324dp"
+        android:layout_height="308dp"
         android:fontFamily="sans-serif"
         android:text="WSK Police - Оперативно-розыскная деятельность - мероприятия, выполняемые гласно и негласно уполномоченными на это государственными  органами с целью выявить, пресечь или раскрыть преступление, отыскать скрывающихся и пропавших без вести людей, установить имущество, подлежащее конфискации, добыть информацию о событиях и деяниях, опасных для государства."
         android:textAlignment="center"
