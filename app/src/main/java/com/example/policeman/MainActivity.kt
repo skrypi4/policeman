@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.text.Editable
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         val check = findViewById<CheckBox>(R.id.checkBox)
         val editor = settings.edit()
 
+
         fun plavno(a:ImageView){//доделать!!!!!!!!!!!!!!
             var b = 1f
             for (i in 1..20) {
@@ -47,19 +49,26 @@ class MainActivity : AppCompatActivity() {
             val imageScreen = arrayOf<Int>(R.drawable.bmw, R.drawable.car, R.drawable.car2, R.drawable.chevrolet,R.drawable.dtp, R.drawable.japan, R.drawable.lada, R.drawable.semerka) //9
             val imageLoad = findViewById<ImageView>(R.id.imageView5)
             val progressBar = findViewById<ProgressBar>(R.id.progressBar)
-            button.visibility = View.INVISIBLE
-            button2.visibility = View.INVISIBLE
+            val mFadeOutAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout)
+            val mFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein)
              imageLoad?.setImageResource(imageScreen[random(1,9)])
 
             val handler = Handler().postDelayed(Runnable {
-                button.visibility = View.VISIBLE
-                button2.visibility = View.VISIBLE
-               //imageLoad.visibility = View.INVISIBLE
                 progressBar.visibility = View.INVISIBLE
-                plavno(imageLoad)
-
             }, 2000)
+
+            val handler2 = Handler().postDelayed(Runnable {
+            imageLoad.startAnimation(mFadeOutAnimation)
+                imageLoad.visibility = View.INVISIBLE
+                progressBar.startAnimation(mFadeOutAnimation)
+                button.startAnimation(mFadeInAnimation)
+                button.visibility = View.VISIBLE
+                button2.startAnimation(mFadeInAnimation)
+                button2.visibility = View.VISIBLE
+            }, 1000)
         }
+
+
         loadScreen()
         if (settings.contains(myLogin)) {
             login.text = settings.getString(myLogin, "")?.toEditable()

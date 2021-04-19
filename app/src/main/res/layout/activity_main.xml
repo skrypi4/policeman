@@ -92,7 +92,7 @@
         android:shadowDy="4"
         android:shadowRadius="2"
         android:text="Voydite"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -107,7 +107,7 @@
         android:shadowDy="4"
         android:shadowRadius="2"
         android:text="Guest"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
