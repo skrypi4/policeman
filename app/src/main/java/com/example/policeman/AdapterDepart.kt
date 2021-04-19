@@ -18,7 +18,6 @@ class AdapterDepart(val ctx: Context,val resource: Int, val items: ArrayList<Res
         } else {
             view = convertView
         }
-
         view?.findViewById<TextView>(R.id.depatId)?.text = items?.get(position)?.id
         view?.findViewById<TextView>(R.id.departAdress)?.text = items?.get(position)?.address
         view?.findViewById<TextView>(R.id.departBoss)?.text = items?.get(position)?.boss
@@ -27,7 +26,6 @@ class AdapterDepart(val ctx: Context,val resource: Int, val items: ArrayList<Res
         view?.findViewById<TextView>(R.id.departEmail)?.text = items?.get(position)?.email
         view?.findViewById<TextView>(R.id.departDescr)?.text = items?.get(position)?.description
         view?.findViewById<TextView>(R.id.departCoord)?.text = items?.get(position)?.coords
-
         return  view!!
     }
 }

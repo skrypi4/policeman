@@ -34,12 +34,10 @@ class photoRobot : AppCompatActivity() {
     private var shrukAndSport2: Boolean = false
     private var shrukAndSport3: Boolean = false
 
-
-
     var GifkaView: GifImageView? = null
 
     fun loadGIF(gif:GifImageView, name: String){
-        if(bytes != null){
+        if(bytes != null){//if(bytes != null){
             return
         }
         try {
@@ -48,6 +46,8 @@ class photoRobot : AppCompatActivity() {
             inputStream.read(bytes)
             gif.setBytes(bytes)
             gif.startAnimation()
+
+            bytes = null
         }
         catch (E: Exception){
             Toast.makeText(this, "Ошибка", Toast.LENGTH_SHORT).show()

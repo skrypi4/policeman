@@ -33,25 +33,15 @@ class MainActivity : AppCompatActivity() {
         val check = findViewById<CheckBox>(R.id.checkBox)
         val editor = settings.edit()
 
-
-        fun plavno(a:ImageView){//доделать!!!!!!!!!!!!!!
-            var b = 1f
-            for (i in 1..20) {
-                a.alpha = b
-                b -= 0.10f
-                Handler().postDelayed(Runnable {
-                }, 2000)
-            }
-        }
         fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
         fun random(n1: Int, n2: Int) = Random.nextInt(n1, n2 + 1)
         fun loadScreen(){
-            val imageScreen = arrayOf<Int>(R.drawable.bmw, R.drawable.car, R.drawable.car2, R.drawable.chevrolet,R.drawable.dtp, R.drawable.japan, R.drawable.lada, R.drawable.semerka) //9
+            val imageScreen = arrayOf<Int>(R.drawable.bmw, R.drawable.car, R.drawable.chevrolet, R.drawable.dtp, R.drawable.ford, R.drawable.japan, R.drawable.lada, R.drawable.night, R.drawable.semerka, R.drawable.tachki, R.drawable.tachki2) //11
             val imageLoad = findViewById<ImageView>(R.id.imageView5)
             val progressBar = findViewById<ProgressBar>(R.id.progressBar)
             val mFadeOutAnimation = AnimationUtils.loadAnimation(this, R.anim.fadeout)
             val mFadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.fadein)
-             imageLoad?.setImageResource(imageScreen[random(1,9)])
+             imageLoad?.setImageResource(imageScreen[random(1,11)])
 
             val handler = Handler().postDelayed(Runnable {
                 progressBar.visibility = View.INVISIBLE
@@ -77,7 +67,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         button.setOnClickListener {
-
             val service = ServiceBuilder.buildService(Service::class.java) //!!!!!!!!!!
                 service.logIn(login.text.toString(), password.text.toString()).enqueue(object:Callback<Response.response>{ //вызываем метод
                     override fun onResponse(
@@ -95,7 +84,6 @@ class MainActivity : AppCompatActivity() {
                             val intent = Intent(this@MainActivity, Menu::class.java)
                             startActivity(intent)  //открыть меню.
                         }
-
                             if(p1?.code()!=200){
                                 Toast.makeText(this@MainActivity, "Логин или пароль неверный", Toast.LENGTH_LONG).show()
                             }
@@ -110,7 +98,6 @@ class MainActivity : AppCompatActivity() {
             var strName = login.text.toString()
             var strPassword = password.text.toString()
 
-            //val editor = settings.edit()
             editor.putString(myLogin, strName)
             editor.putString(myPassword, strPassword)
             editor.apply()

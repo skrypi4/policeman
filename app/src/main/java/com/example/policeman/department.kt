@@ -22,7 +22,6 @@ class department : AppCompatActivity() {
                     val adapter = AdapterDepart(this@department, R.layout.department1, items!!)
                     findViewById<ListView>(R.id.listView2).adapter = adapter
                 }
-
             }
 
             override fun onFailure(p0: Call<Response.department>?, p1: Throwable?) {

@@ -14,8 +14,6 @@ class AdapterListView(context: Context, resource: Int): BaseAdapter() {
     var resource: Int? = null
     var items: ArrayList<Response.wantedItem>? = null
 
-
-
     constructor(context: Context, resource: Int, items: ArrayList<Response.wantedItem>): this(context, resource){
 
         this.resource = resource
@@ -30,7 +28,6 @@ class AdapterListView(context: Context, resource: Int): BaseAdapter() {
         } else {
             view = convertView
         }
-
 
         Picasso.get().load(items?.get(position)?.photo).into(view?.findViewById<ImageView>(R.id.photoPrestupnika))
 
