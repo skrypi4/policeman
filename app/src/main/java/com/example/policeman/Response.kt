@@ -13,7 +13,6 @@ class Response {
         val token: String
     )
 
-
     data class wanted(
             val data: ArrayList<wantedItem>,
             val success: Boolean
@@ -45,8 +44,4 @@ class Response {
         val description: String,
         val coords: String
     )
-
-
-
-
 }

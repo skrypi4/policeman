@@ -58,7 +58,6 @@ class MainActivity : AppCompatActivity() {
             }, 1000)
         }
 
-
         loadScreen()
         if (settings.contains(myLogin)) {
             login.text = settings.getString(myLogin, "")?.toEditable()

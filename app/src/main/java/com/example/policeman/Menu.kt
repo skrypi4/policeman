@@ -24,26 +24,42 @@ class Menu : AppCompatActivity() {
 
         menuButton1.setOnClickListener {
             menuButton1.startAnimation(mTranslateAnimation)
+            menuButton1.visibility = View.INVISIBLE
+
             val handler1 = Handler().postDelayed(Runnable {
                 val intent = Intent(this@Menu, department::class.java)
                 startActivity(intent)
-            }, 600)
+            }, 750)
+
+            val handler2 = Handler().postDelayed(Runnable {
+                menuButton1.visibility = View.VISIBLE
+            }, 1500)
         }
 
         menuButton2.setOnClickListener {
             menuButton2.startAnimation(mTranslateAnimation)
+            menuButton2.visibility = View.INVISIBLE
             val handler1 = Handler().postDelayed(Runnable {
                 val intent = Intent(this@Menu, dlyaFramentov::class.java)
                 startActivity(intent)
-            }, 600)
+            }, 750)
+
+            val handler2 = Handler().postDelayed(Runnable {
+                menuButton2.visibility = View.VISIBLE
+            }, 1500)
         }
 
         menuButton3.setOnClickListener {
             menuButton3.startAnimation(mTranslateAnimation)
+            menuButton3.visibility = View.INVISIBLE
             val handler1 = Handler().postDelayed(Runnable {
                 val intent = Intent(this@Menu, photoRobot::class.java)
                 startActivity(intent)
-            }, 600)
+            }, 750)
+
+            val handler2 = Handler().postDelayed(Runnable {
+                menuButton3.visibility = View.VISIBLE
+            }, 1500)
         }
 
         menuButton4.setOnClickListener {
@@ -53,14 +69,24 @@ class Menu : AppCompatActivity() {
                 val intent = Intent(this@Menu, Paint::class.java)
                 startActivity(intent)
             }, 750)
+
+            val handler2 = Handler().postDelayed(Runnable {
+                menuButton4.visibility = View.VISIBLE
+            }, 1500)
         }
 
         menuButton5.setOnClickListener {
             menuButton5.startAnimation(mTranslateAnimation)
+            menuButton5.visibility = View.INVISIBLE
             val handler1 = Handler().postDelayed(Runnable {
                 val intent = Intent(this@Menu, aboutUs::class.java)
                 startActivity(intent)
             }, 750)
+
+            val handler2 = Handler().postDelayed(Runnable {
+                menuButton5.visibility = View.VISIBLE
+            }, 1500)
+
 
         }
 
